@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPortal.Data", "HRPortal.Data\HRPortal.Data.csproj", "{26A6597B-B2EE-4B30-8D2B-07F24D79B1AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPortal.Models", "HRPortal.Models\HRPortal.Models.csproj", "{80687561-3BF7-4651-A012-F6A5A396B221}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPortal.UI", "HRPortal.UI\HRPortal.UI.csproj", "{97A99797-ADA1-4916-9A13-3F28E386760A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26A6597B-B2EE-4B30-8D2B-07F24D79B1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26A6597B-B2EE-4B30-8D2B-07F24D79B1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26A6597B-B2EE-4B30-8D2B-07F24D79B1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26A6597B-B2EE-4B30-8D2B-07F24D79B1AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80687561-3BF7-4651-A012-F6A5A396B221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80687561-3BF7-4651-A012-F6A5A396B221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80687561-3BF7-4651-A012-F6A5A396B221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80687561-3BF7-4651-A012-F6A5A396B221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A99797-ADA1-4916-9A13-3F28E386760A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A99797-ADA1-4916-9A13-3F28E386760A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A99797-ADA1-4916-9A13-3F28E386760A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A99797-ADA1-4916-9A13-3F28E386760A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

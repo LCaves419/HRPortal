@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HRPortal.Models.ApplicationInformation>
+﻿@model System.Collections.Generic.IEnumerable<HRPortal.Models.ApplicationInformation>
 
 @{
     ViewBag.Title = "Edit";
@@ -39,7 +39,7 @@
             @Html.DisplayNameFor(model => model.Awards)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Firstname)
+            @Html.DisplayNameFor(model => model.FirstName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.LastName)
@@ -54,7 +54,7 @@
             @Html.DisplayNameFor(model => model.State)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Zipcode)
+            @Html.DisplayNameFor(model => model.ZipCode)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PhoneNumber)
@@ -110,7 +110,7 @@
             @Html.DisplayFor(modelItem => item.Awards)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Firstname)
+            @Html.DisplayFor(modelItem => item.FirstName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.LastName)
@@ -125,7 +125,7 @@
             @Html.DisplayFor(modelItem => item.State)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Zipcode)
+            @Html.DisplayFor(modelItem => item.ZipCode)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PhoneNumber)

@@ -22,17 +22,17 @@ namespace HRPortal.Data
                 _appInfo.AddRange(new List<ApplicationInformation>()
                 {
                     new ApplicationInformation {ResumeId = 1, Position = "Programmer", DesiredSalary = 80000,
-                        DateOfApplication = DateTime.Parse("10/21/2015"), EmployerName = "NASA",
+                        DateOfApplication = DateTime.Parse("10/21/2015"), SchoolName = "Southeastern Louisiana University", EmployerName = "NASA",
                         StartDate = DateTime.Parse("01/01/1994"), EndDate = DateTime.Parse("01/01/2010"), JobTitle = "Sales", Responsibilities = "SOld Stuff",
-                        Firstname = "Bob", LastName = "Smith", StreetAddress = "103 MAin St", City = "Huntsville", State = "AL", Zipcode = "35016",
+                        FirstName = "Bob", LastName = "Smith", StreetAddress = "103 MAin St", City = "Huntsville", State = "AL", ZipCode = "35016",
                         PhoneNumber = "586-4681", Email =  "Bob@gmail.com", Major = "Information Tech", GraduationDate = DateTime.Parse("05/21/1993"),
                         GPA = 3.9, Awards = " I am a smart Guy" },
 
 
                     new ApplicationInformation {ResumeId = 2, Position = "Sales", DesiredSalary = 80000,
-                        DateOfApplication = DateTime.Parse("10/21/2015"), EmployerName = "NASA",
+                        DateOfApplication = DateTime.Parse("10/21/2015"), SchoolName = "Southeastern Louisiana University", EmployerName = "NASA",
                         StartDate = DateTime.Parse("01/01/1994"), EndDate = DateTime.Parse("01/01/2010"), JobTitle = "Sales", Responsibilities = "SOld Stuff",
-                        Firstname = "Bob", LastName = "Smith", StreetAddress = "103 MAin St", City = "Huntsville", State = "AL", Zipcode = "35016",
+                        FirstName = "Bob", LastName = "Smith", StreetAddress = "103 MAin St", City = "Huntsville", State = "AL", ZipCode = "35016",
                         PhoneNumber = "586-4681", Email =  "Bob@gmail.com", Major = "Information Tech", GraduationDate = DateTime.Parse("05/21/1993"),
                         GPA = 3.9, Awards = " I am a smart Guy"}
                                   });

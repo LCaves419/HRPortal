@@ -44,12 +44,12 @@ namespace HRPortal.Data
                             JobTitle = (columns[7]),
                             Responsibilities = (columns[8]),
                             //Personal
-                            Firstname = (columns[9]),
+                            FirstName = (columns[9]),
                             LastName = (columns[10]),
                             StreetAddress = (columns[11]),
                             City = (columns[12]),
                             State = (columns[13]),
-                            Zipcode = (columns[14]),
+                            ZipCode = (columns[14]),
                             PhoneNumber = (columns[15]),
                             Email = (columns[16]),
                             //Education
@@ -114,8 +114,8 @@ namespace HRPortal.Data
                        app.ResumeId, app.Position, app.DesiredSalary, app.DateOfApplication,
                        app.EmployerName, app.StartDate, app.EndDate, 
                        app.JobTitle, app.Responsibilities,
-                       app.Firstname, app.LastName, app.StreetAddress, 
-                       app.City, app.State, app.Zipcode, app.PhoneNumber, app.Email,
+                       app.FirstName, app.LastName, app.StreetAddress, 
+                       app.City, app.State, app.ZipCode, app.PhoneNumber, app.Email,
                        app.Major, app.GraduationDate, app.GPA, app.Awards));
                 }
             }

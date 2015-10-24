@@ -16,3 +16,17 @@ textarea {
     max-width: 280px;
 }
 
+.personal {
+    background-color: darkred;
+    color: white;
+    padding: 15px;
+}
+
+.education {
+    padding-top: 15px;
+}
+
+.employment {
+    padding: 15px;
+}
+

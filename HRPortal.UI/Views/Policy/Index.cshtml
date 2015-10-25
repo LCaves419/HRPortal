@@ -1,0 +1,75 @@
+﻿@model IEnumerable<HRPortal.Models.PolicyInformation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Policies</h2>
+
+<p>
+    @Html.ActionLink("Create New Policy", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CatId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolicyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttendancePolicy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoodPolicy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PolicyText)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CatId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttendancePolicy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FoodPolicy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyText)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

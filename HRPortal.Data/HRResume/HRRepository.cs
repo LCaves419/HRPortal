@@ -28,10 +28,10 @@ namespace HRPortal.Data
                     {
                         var columns = inputLine.Split(',');
                         var appInfo = new ApplicationInformation()
-                       // @PersonalInfo = new PersonalInformation();
-                        //@EmploymentInfo = new EmploymentInformation();
-                       // @EducationInfo = new EducationInformation();
-                        {   
+                            // @PersonalInfo = new PersonalInformation();
+                            //@EmploymentInfo = new EmploymentInformation();
+                            // @EducationInfo = new EducationInformation();
+                        {
                             //Application                       
                             ResumeId = int.Parse(columns[0]),
                             Position = (columns[1]),
@@ -106,17 +106,20 @@ namespace HRPortal.Data
         {
             using (var writer = File.CreateText(_fileName))
             {
-                writer.WriteLine("Id,Position,DesiredSalary,DateOfApplication,EmployerName,StartDate,EndDate,JobTitle,Responsibilities,FirstName,LastName,StreetAddress,City,State,ZipCode,PhoneNumber,Email,Major,GraduationDate,GPA,Awards");
+                writer.WriteLine(
+                    "Id,Position,DesiredSalary,DateOfApplication,EmployerName,StartDate,EndDate,JobTitle,Responsibilities,FirstName,LastName,StreetAddress,City,State,ZipCode,PhoneNumber,Email,Major,GraduationDate,GPA,Awards");
 
                 foreach (ApplicationInformation app in Apps)
                 {
-                    writer.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {15}, {16}, {17}, {18}, {19}, {20}", 
-                       app.ResumeId, app.Position, app.DesiredSalary, app.DateOfApplication,
-                       app.EmployerName, app.StartDate, app.EndDate, 
-                       app.JobTitle, app.Responsibilities,
-                       app.FirstName, app.LastName, app.StreetAddress, 
-                       app.City, app.State, app.ZipCode, app.PhoneNumber, app.Email,
-                       app.Major, app.GraduationDate, app.GPA, app.Awards));
+                    writer.WriteLine(
+                        String.Format(
+                            "{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {15}, {16}, {17}, {18}, {19}, {20}",
+                            app.ResumeId, app.Position, app.DesiredSalary, app.DateOfApplication,
+                            app.EmployerName, app.StartDate, app.EndDate,
+                            app.JobTitle, app.Responsibilities,
+                            app.FirstName, app.LastName, app.StreetAddress,
+                            app.City, app.State, app.ZipCode, app.PhoneNumber, app.Email,
+                            app.Major, app.GraduationDate, app.GPA, app.Awards));
                 }
             }
         }

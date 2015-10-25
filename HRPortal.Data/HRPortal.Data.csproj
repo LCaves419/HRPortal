@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory.cs" />
-    <Compile Include="HRRepository.cs" />
-    <Compile Include="IApplicationRepository.cs" />
-    <Compile Include="MockHRRepository.cs" />
+    <Compile Include="HRResume\Factory.cs" />
+    <Compile Include="HRResume\HRRepository.cs" />
+    <Compile Include="HRResume\MockHRRepository.cs" />
+    <Compile Include="PolicyRepo\MockPolicyRepository.cs" />
+    <Compile Include="PolicyRepo\PolicyRepository.cs" />
+    <Compile Include="PolicyRepo\PolicyRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

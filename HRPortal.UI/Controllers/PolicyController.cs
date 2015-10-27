@@ -60,8 +60,7 @@ namespace HRPortal.UI.Controllers
             var a = new PolicyInformation();
 
             // get the data from the input fields
-            a.CatId = int.Parse(Request.Form["CatId"]);
-            a.PolId = int.Parse(Request.Form["LastName"]);
+            //a.PolId = int.Parse(Request.Form["LastName"]);
             a.Category= Request.Form["Category"];
             a.PolicyName = Request.Form["PolicyName"];
             a.AttendancePolicy = Request.Form["AttendencePolicy"];

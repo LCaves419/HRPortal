@@ -21,12 +21,12 @@ namespace HRPortal.Data.PolicyRepo
             {
                 _polInfo.AddRange(new List<PolicyInformation>()
                 {
-                    new PolicyInformation {CatId = 1, PolId = 1, Category = "Attendance", PolicyName = "Tardy",
+                    new PolicyInformation {PolId = 1, Category = "Attendance", PolicyName = "Tardy",
                             CreationDate = DateTime.Parse("12/02/2011"),
                             PolicyText = ("BLIUHEJLUHWLEUHOU FGHWEOPIUGHPEWOIUGHPOWUEHFLJD SHPOJOSH DPOIUWE GHOIUPEWHGPOUIW HEPOUIEW HOUVPWH BDPOJUPDGWHPOUWEGHGEOWPU HEPWOUG HWEPO U.")},
 
 
-                    new PolicyInformation {CatId = 2, PolId = 2, Category = "Food", PolicyName = "Trash",
+                    new PolicyInformation {PolId = 2, Category = "Food", PolicyName = "Trash",
                             CreationDate = DateTime.Parse("12/02/2011"),
                             PolicyText = ("BLIUHEJLUHWLEUHOU FGHWEOPIUGHPEWOIUGHPOWUEHFLJD SHPOJOSH DPOIUWE GHOIUPEWHGPOUIW HEPOUIEW HOUVPWH BDPOJUPDGWHPOUWEGHGEOWPU HEPWOUG HWEPO U.")}
                                   });

@@ -108,7 +108,7 @@ namespace HRPortal.UI.Controllers
             // add the application
             repo.Add(a);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Edit");
             //return View(model);
         }
     }

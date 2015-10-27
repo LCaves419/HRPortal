@@ -25,15 +25,17 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Apply <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">Admin</a></li>
+                    <li class="active">@Html.ActionLink("Apply", "Create", "Home") <span class="sr-only">(current)</span></li>
+                    <li><a href="#">Link</a></li>
+                    
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Policies <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">View Policies</a></li>
+                        <li class="active">@Html.ActionLink("View Policies", "Index", "Policy") <span class="sr-only">(current)</span></li>
                         <li><a href="#">Manage Policies</a></li>
-
-                        <li class="dropdown-submenu">
+                        <li class="active">@Html.ActionLink("Add New Policy", "Create", "Policy") <span class="sr-only">(current)</span></li>
+                        <li class="active">@Html.ActionLink("Edit Policies", "Edit", "Policy") <span class="sr-only">(current)</span></li>
+                        @*<li class="dropdown-submenu">
                             <a tabindex="-1" href="#">Add New Policy</a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -41,12 +43,12 @@
                                 </li>
                                 <li><a href="#">Manage Catagories</a></li>
                             </ul>
-                        </li>
+                        </li>*@
                     </ul>
                 </li>
                     </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
+                    <li class="active">@Html.ActionLink("Admin", "Index", "Home") <span class="sr-only">(current)</span></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                         <ul class="dropdown-menu">

@@ -16,17 +16,33 @@ textarea {
     max-width: 280px;
 }
 
-.personal {
+/* Sets hr line break styling */
+hr {
+    height: 2px;
+    background-color:#555;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+/* Heading styling */
+.heading {
     background-color: darkred;
+    border-color: black;
+    border-corner-shape: scoop;
+    border-radius: 30px;
     color: white;
-    padding: 15px;
+    padding: 15px !important;
+    padding-left: 25px;
 }
 
-.education {
-    padding-top: 15px;
+.navbar-collapse {
+    background-color: #a52a2a;
+    color: white;
 }
 
-.employment {
-    padding: 15px;
+/* Buttons */
+.navbar-nav .li .a {
+    background-color: black;
+    color: white;
 }
-

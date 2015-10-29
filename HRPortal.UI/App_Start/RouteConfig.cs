@@ -13,6 +13,11 @@ namespace HRPortal.UI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute("Policy", "View", new {controller = "Policy", action = "Index"});
+            routes.MapRoute("HomeAdmin", "Admin", new {controller = "Home", action = "Index"});
+            routes.MapRoute("HomeCreate", "Apply", new { controller = "Home", action = "Create" });
+
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

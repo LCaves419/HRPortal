@@ -10,7 +10,7 @@
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
+    @*<nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -20,8 +20,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                    <a class="navbar-brand" href="/Home/Index"> @*<span class="blah"><img src="~/Images/main-thumb-t-419429-200-njzoxwfkjlsuitxffhaddyjaqijlgdbf.jpeg" /></span>*@ SG Corp. </a>
-            </div>
+                    <a class="navbar-brand" href="/Home/Index"> @*<span class="blah"><img src="~/Images/main-thumb-t-419429-200-njzoxwfkjlsuitxffhaddyjaqijlgdbf.jpeg" /></span> SG Corp. </a>
+            @*</div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
@@ -31,12 +31,11 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Policies <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li class="default">@Html.ActionLink("View/Edit Policies", "Index", "Policy") <span class="sr-only">(current)</span></li>
-                        <li class="divider"></li>
+                        <li class="default">@Html.ActionLink("View Policies", "Index", "Policy") <span class="sr-only">(current)</span></li>
                         <li><a href="#">Manage Policies</a></li>
-                        <li class="divider"></li>
                         <li class="default">@Html.ActionLink("Add New Policy", "Create", "Policy") <span class="sr-only">(current)</span></li>
-                        @*<li class="dropdown-submenu">
+                        <li class="default">@Html.ActionLink("Edit Policies", "Edit", "Policy") <span class="sr-only">(current)</span></li>
+                        <li class="dropdown-submenu">
                             <a tabindex="-1" href="#">Add New Policy</a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -44,7 +43,7 @@
                                 </li>
                                 <li><a href="#">Manage Catagories</a></li>
                             </ul>
-                        </li>*@
+                        </li>
                     </ul>
                 </li>
                     </ul>
@@ -64,7 +63,7 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-@*<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">

@@ -32,7 +32,7 @@ hr {
     border-corner-shape: scoop;
     border-radius: 30px;
     color: white;
-    padding: 15px !important;
+    padding: 15px;
     padding-left: 25px;
 }
 

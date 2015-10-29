@@ -130,8 +130,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Policy\Index.cshtml" />
-    <Content Include="Views\Policy\Edit.cshtml" />
     <Content Include="Views\Policy\Create.cshtml" />
+    <Content Include="Views\Policy\Edit.cshtml" />
+    <Content Include="Views\Home\Create - Copy.cshtml" />
+    <Content Include="Views\Shared\_Layout - Apply.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -38,15 +38,23 @@ namespace HRPortal.UI.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public ActionResult DeletePolicy(int id)
+        public ActionResult Delete(int id)
         {
-           
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
+            //var pol = repo.GetById(id);
             repo.Delete(id);
-          
+
             return RedirectToAction("Index");
         }
+
+        //[HttpPost]
+        //public ActionResult Delete(int id)
+        //{
+        //    var repo = PolicyRepositoryFactory.CreatePolicyRepository();
+        //    repo.Delete(id);
+          
+        //    return View("Index");
+        //}
 
         public ActionResult Create()
         {

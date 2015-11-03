@@ -35,10 +35,8 @@ namespace HRPortal.Data.PolicyRepo
                             PolId = int.Parse(columns[0]),
                             Category = (columns[1]),
                             PolicyName = (columns[2]),
-                            AttendancePolicy = (columns[3]),
-                            FoodPolicy = (columns[44]),
-                            CreationDate = DateTime.Parse(columns[5]),
-                            PolicyText = (columns[6]),
+                            CreationDate = DateTime.Parse(columns[3]),
+                            PolicyText = (columns[4]),
                         };
 
                         Policies.Add(policyInfo);
@@ -47,6 +45,11 @@ namespace HRPortal.Data.PolicyRepo
             }
 
             return Policies;
+        }
+
+        public List<Category> GetAllCategories()
+        {
+            throw new NotImplementedException();
         }
 
         public void Add(PolicyInformation newPolicy)
@@ -92,8 +95,8 @@ namespace HRPortal.Data.PolicyRepo
 
                 foreach (PolicyInformation pol in Policies)
                 {
-                    writer.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}",
-                       pol.PolId, pol.Category, pol.PolicyName, pol.AttendancePolicy, pol.FoodPolicy,
+                    writer.WriteLine(String.Format("{0}, {1}, {2}, {3}, {4}",
+                       pol.PolId, pol.Category, pol.PolicyName, 
                        pol.CreationDate, pol.PolicyText));
                 }
             }

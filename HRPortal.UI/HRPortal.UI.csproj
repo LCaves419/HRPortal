@@ -115,25 +115,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CatagoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PolicyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryVM.cs" />
+    <Compile Include="Models\PolicyInformationVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Policy\Index.cshtml" />
+    <Content Include="Views\Policy\OldIndex.cshtml" />
     <Content Include="Views\Policy\Create.cshtml" />
     <Content Include="Views\Policy\Edit.cshtml" />
     <Content Include="Views\Home\Create - Copy.cshtml" />
     <Content Include="Views\Shared\_Layout - Apply.cshtml" />
+    <Content Include="Views\Policy\GetCats.cshtml" />
+    <Content Include="Views\Catagory\Index.cshtml" />
+    <Content Include="Views\Catagory\RequestForm.cshtml" />
+    <Content Include="Views\Catagory\Result.cshtml" />
+    <Content Include="Views\Policy\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -144,7 +154,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="DataFiles\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HRPortal.Data\HRPortal.Data.csproj">

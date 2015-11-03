@@ -1,0 +1,30 @@
+﻿@model HRPortal.UI.Models.CategoryVM
+
+@{
+    ViewBag.Title = "RequestForm";
+}
+
+<h2>Category</h2>
+@using (Html.BeginForm("RequestFormPost", "Category", FormMethod.Post))
+{
+    <div>
+        @Html.DisplayFor(m => m.Category.CatName)
+    </div>
+
+
+
+    <button class="btn btn-primary">Submit</button>
+
+    @*<div class="form-group">
+        <label>Person Id</label>
+        <input type="text" name="PersonId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" name="FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" name="LastName" class="form-control" />
+    </div>*@
+}

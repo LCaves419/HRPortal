@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using HRPortal.Data;
 using HRPortal.Data.PolicyRepo;
 using HRPortal.Models;
+using HRPortal.UI.Models;
 
 namespace HRPortal.UI.Controllers
 {
@@ -17,8 +18,20 @@ namespace HRPortal.UI.Controllers
             // retrieve all the contacts
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
             var policies = repo.GetAll();
+            List<PolicyInformationVM> pvms = new List<PolicyInformationVM>();
 
-            return View(policies);
+            foreach (var p in policies)
+            {
+                PolicyInformationVM pvm = new PolicyInformationVM();
+                pvm.PolId = p.PolId.ToString();
+                pvm.Category = p.Category;
+                pvm.PolicyName = p.PolicyName;
+                pvm.CreationDate = p.CreationDate;
+                pvm.PolicyText = p.PolicyText;
+                pvms.Add(pvm);
+            }
+
+            return View(pvms);
         }
 
         public ActionResult Edit(int id)
@@ -47,15 +60,7 @@ namespace HRPortal.UI.Controllers
             return RedirectToAction("Index");
         }
 
-        //[HttpPost]
-        //public ActionResult Delete(int id)
-        //{
-        //    var repo = PolicyRepositoryFactory.CreatePolicyRepository();
-        //    repo.Delete(id);
-          
-        //    return View("Index");
-        //}
-
+        
         public ActionResult Create()
         {
             return View();
@@ -71,8 +76,6 @@ namespace HRPortal.UI.Controllers
             //a.PolId = int.Parse(Request.Form["LastName"]);
             a.Category= Request.Form["Category"];
             a.PolicyName = Request.Form["PolicyName"];
-            a.AttendancePolicy = Request.Form["AttendencePolicy"];
-            a.FoodPolicy = Request.Form["FoodPolicy"];
             a.CreationDate = DateTime.Parse(Request.Form["CreationDate"]);
             a.PolicyText = Request.Form["PolicyText"];
            
@@ -84,5 +87,7 @@ namespace HRPortal.UI.Controllers
             return RedirectToAction("Index");
             //return View(model);
         }
+
+      
     }
 }

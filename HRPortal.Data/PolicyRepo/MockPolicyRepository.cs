@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using HRPortal.Models;
 
@@ -11,7 +12,7 @@ namespace HRPortal.Data.PolicyRepo
     public class MockPolicyRepository : IPolicyRepository
     {
         private static List<PolicyInformation> _polInfo = new List<PolicyInformation>();
-        PolicyInformation pol = new PolicyInformation();
+        //PolicyInformation pol = new PolicyInformation();
 
         private static bool isFirstLoad = false;
 
@@ -37,7 +38,27 @@ namespace HRPortal.Data.PolicyRepo
         public List<PolicyInformation> GetAll()
         {
             return _polInfo;
-        } 
+        }
+   //*********************Lara****************************************
+   //*****************************************************************
+        public List<Category> GetAllCategories()
+        {
+            List<Category> catList = new List<Category>();
+            foreach (var p in _polInfo)
+            {
+                Category cats = new Category()
+                {
+                    CatId = p.PolId,
+                   // CatId = p.Category.Distinct()
+                    
+                    CatName = p.Category
+                };
+                catList.Add(cats);
+            }
+            return catList;
+        }
+  //****************************************************************
+ //*****************************************************************
 
         public void Add(PolicyInformation newPolicy)
         {
@@ -64,5 +85,20 @@ namespace HRPortal.Data.PolicyRepo
         {
             return _polInfo.FirstOrDefault(p => p.PolId == id);
         }
+
+        //public List<string> GetCat()
+        //{
+        //    List<PolicyInformation> cats;
+        //    cats = GetAll();
+
+        //    //var results = from c in cats
+        //    //    select c.Category;
+        //    foreach (var c in cats)
+        //    {
+        //        List<string> cat = new List<string>();
+        //        cat = c.Category;
+        //    }
+
+        //}
     }
 }

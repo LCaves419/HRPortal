@@ -10,6 +10,11 @@ namespace HRPortal.UI.Models
 {
     public class PolicyInformationVM
     {
+        public PolicyInformationVM()
+        {
+            ListCat = new List<SelectListItem>();
+        }
+
         [Display(Name = "Policy Id")]
         public string PolId { get; set; }
 
@@ -30,19 +35,19 @@ namespace HRPortal.UI.Models
         public Category Category { get; set; }
         public List<SelectListItem> ListCat { get; set; }
 
-        public List<Category> CreateCategoryList(List<Category> listOfCategories)
+        public void CreateCategoryList(List<Category> listOfCategories)
         {
-            ListCat = new List<SelectListItem>();
 
             foreach (var s in listOfCategories)
             {
                 var newItem = new SelectListItem();
                 //newItem.Text = s.ListCat.ToString();
-                newItem.Value = s.CatName;
+                newItem.Text = s.CatName;
                 newItem.Value = s.CatId.ToString();
                 
                 ListCat.Add(newItem);
             }
+           
         }
         //*************************************************************
 

@@ -111,7 +111,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\Create.cshtml" />
-    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -140,10 +139,12 @@
     <Content Include="Views\Home\Create - Copy.cshtml" />
     <Content Include="Views\Shared\_Layout - Apply.cshtml" />
     <Content Include="Views\Policy\GetCats.cshtml" />
-    <Content Include="Views\Catagory\Index.cshtml" />
     <Content Include="Views\Catagory\RequestForm.cshtml" />
     <Content Include="Views\Catagory\Result.cshtml" />
     <Content Include="Views\Policy\Index.cshtml" />
+    <Content Include="Views\Catagory\Index.cshtml" />
+    <Content Include="Views\Catagory\ManagePoliciesForDropDown.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

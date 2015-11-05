@@ -27,13 +27,13 @@ namespace HRPortal.UI.Controllers
 
             // get the contact from the repo
             var repo = Factory.CreateApplicationRepository();
-            var app = repo.GetById(id);
+            ApplicationInformation  app = repo.GetById(id);
 
             return View(app);
         }
 
         [HttpPost]
-        public ActionResult EditApplication(ApplicationInformation application)
+        public ActionResult Edit(ApplicationInformation application)
         {
             //// create a new contact
             //var c = new Contact();

@@ -37,7 +37,24 @@ namespace HRPortal.UI.Controllers
 
             return View("Result", p);
         }
-      
+
+        public ActionResult ManagePoliciesForDropDown()
+        {
+            var repo = PolicyRepositoryFactory.CreatePolicyRepository();
+            var cats = repo.GetAllCategories();
+
+
+            List<PolicyInformationVM> pvms = new List<PolicyInformationVM>();
+            PolicyInformationVM pvm = new PolicyInformationVM();
+
+            pvm.Category = new Category();
+            pvm.CreateCategoryList(cats);
+
+            return View(pvm);
+
+
+        }
+
 
 
     }

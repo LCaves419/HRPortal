@@ -21,32 +21,40 @@ namespace HRPortal.UI.Controllers
         {
             // retrieve all the contacts
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
+            //get policies from repo
             var policies = repo.GetAll();
+            //get Categories from repo
+            //var cats = repo.GetAllCategories();
+            //List<PolicyInformationVM> pvms = new List<PolicyInformationVM>();
+            //PolicyInformationVM pvm = new PolicyInformationVM();
+            //pvm.Category = new Category();
+            //pvm.CreateCategoryList(cats);
+
+            return View(policies);
 
 
-            List<PolicyInformationVM> pvms = new List<PolicyInformationVM>();
-            PolicyInformationVM pvm = new PolicyInformationVM();
 
-            foreach (var p in policies)
-            {
-                pvm.PolId = p.PolId.ToString();
-               // pvm.CategoryList.Add(p.Category); 
-                pvm.PolicyName = p.PolicyName;
-                pvm.CreationDate = p.CreationDate;
-                pvm.PolicyText = p.PolicyText;
-                pvms.Add(pvm);
+            //foreach (var p in policies)
+            //{
+            //    pvm.PolId = p.PolId.ToString();
+            //   // pvm.CategoryList.Add(p.Category); 
+            //    pvm.PolicyName = p.PolicyName;
+            //    pvm.CreationDate = p.CreationDate;
+            //    pvm.PolicyText = p.PolicyText;
+            //    pvms.Add(pvm);
+            //    var cl =  pvm.CreateCategoryList(cats);
+            //    //pvm.ListCat = cl;
+            //    return View(cl);//}
 
-                var cats = repo.GetAllCategories();
-
-               var cl =  pvm.CreateCategoryList(cats);
-                pvm.ListCat = cl;
-
-            }
-
-            return View(pvms);
         }
-//***********************************************************
-//***********************************************************
+
+        //[HttpPost]
+        //public ActionResult AddAddress(PolicyInformationVM newPolicy)
+        //{
+        //    return View("Result", newPolicy.);
+        //}
+        //***********************************************************
+        //***********************************************************
         public ActionResult Edit(int id)
         {
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
@@ -83,19 +91,19 @@ namespace HRPortal.UI.Controllers
         public ActionResult Create(PolicyInformation model)
         {
             // create a contact
-            var a = new PolicyInformation();
+            //var a = new PolicyInformation();
 
-            // get the data from the input fields
-            //a.PolId = int.Parse(Request.Form["LastName"]);
-            a.Category= Request.Form["Category"];
-            a.PolicyName = Request.Form["PolicyName"];
-            a.CreationDate = DateTime.Parse(Request.Form["CreationDate"]);
-            a.PolicyText = Request.Form["PolicyText"];
+            //// get the data from the input fields
+            ////a.PolId = int.Parse(Request.Form["LastName"]);
+            //a.Category= Request.Form["Category"];
+            //a.PolicyName = Request.Form["PolicyName"];
+            //a.CreationDate = DateTime.Parse(Request.Form["CreationDate"]);
+            //a.PolicyText = Request.Form["PolicyText"];
            
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
 
             // add the policy
-            repo.Add(a);
+            repo.Add(model);
 
             return RedirectToAction("Index");
             //return View(model);

@@ -11,6 +11,7 @@ namespace HRPortal.UI.Controllers
 {
     public class CatagoryController : Controller
     {
+
         // GET: Catagory
         public ActionResult Index()
         {
@@ -20,10 +21,12 @@ namespace HRPortal.UI.Controllers
             return View(cats);
         }
 
+
         public ActionResult RequestForm()
         {
             return View();
         }
+
 
         [HttpPost]
         public ActionResult RequestFormPost()
@@ -31,7 +34,6 @@ namespace HRPortal.UI.Controllers
             CategoryVM p = new CategoryVM();
 
             p.Category.CatName = (Request.Form["Category Name"]);
-          
 
             return View("Result", p);
         }

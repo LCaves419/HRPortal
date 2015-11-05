@@ -6,6 +6,9 @@
 
 <h2>Index</h2>
 
+    
+    @Html.DropDownList("PolicyInformationVM", new SelectList(Model.))
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -24,7 +27,9 @@
             @Html.DisplayNameFor(model => model.PolicyText)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Category)
+            
+            @foreach (var c in Model)
+            @Html.DropDownListFor(model => model.)
         </th>
         <th></th>
     </tr>

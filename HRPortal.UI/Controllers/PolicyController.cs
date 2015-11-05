@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,28 +13,40 @@ namespace HRPortal.UI.Controllers
 {
     public class PolicyController : Controller
     {
+//************************************************************
+//************************************************************
+
         // GET: Policy
         public ActionResult Index()
         {
             // retrieve all the contacts
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
             var policies = repo.GetAll();
+
+
             List<PolicyInformationVM> pvms = new List<PolicyInformationVM>();
+            PolicyInformationVM pvm = new PolicyInformationVM();
 
             foreach (var p in policies)
             {
-                PolicyInformationVM pvm = new PolicyInformationVM();
                 pvm.PolId = p.PolId.ToString();
-                pvm.Category = p.Category;
+               // pvm.CategoryList.Add(p.Category); 
                 pvm.PolicyName = p.PolicyName;
                 pvm.CreationDate = p.CreationDate;
                 pvm.PolicyText = p.PolicyText;
                 pvms.Add(pvm);
+
+                var cats = repo.GetAllCategories();
+
+               var cl =  pvm.CreateCategoryList(cats);
+                pvm.ListCat = cl;
+
             }
 
             return View(pvms);
         }
-
+//***********************************************************
+//***********************************************************
         public ActionResult Edit(int id)
         {
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();

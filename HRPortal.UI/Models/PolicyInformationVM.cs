@@ -10,7 +10,6 @@ namespace HRPortal.UI.Models
 {
     public class PolicyInformationVM
     {
-        // PolicyInformation pol = new PolicyInformation();
         [Display(Name = "Policy Id")]
         public string PolId { get; set; }
 
@@ -26,30 +25,27 @@ namespace HRPortal.UI.Models
         [Display(Name = "Policy Text")]
         public string PolicyText { get; set; }
 
-        //public PolicyInformation pol { get; set; }
 
-        //public IEnumerable<SelectListItem> CategoryList { get; set; }// categoryVM
+        //****************************************************
+        public Category Category { get; set; }
+        public List<SelectListItem> ListCat { get; set; }
 
-        [Display(Name = "Category List")]
-        public string Category { get; set; }
+        public List<Category> CreateCategoryList(List<Category> listOfCategories)
+        {
+            ListCat = new List<SelectListItem>();
 
-        //public IEnumerable<SelectListItem> Categories
-        //{
-        //    get { return new SelectList(CategoryList,"Category");}
-        //}
+            foreach (var s in listOfCategories)
+            {
+                var newItem = new SelectListItem();
+                //newItem.Text = s.ListCat.ToString();
+                newItem.Value = s.CatName;
+                newItem.Value = s.CatId.ToString();
+                
+                ListCat.Add(newItem);
+            }
+        }
+        //*************************************************************
 
-
-        //public class ViewModel
-        //{
-        //    private readonly List<IceCreamFlavor> _flavors;
-
-        //    [Display(Name = "Favorite Flavor")]
-        //    public int SelectedFlavorId { get; set; }
-
-        //    public IEnumerable<SelectListItem> FlavorItems
-        //    {
-        //        get { return new SelectList(_flavors, "Id", "Name"); }
-        //    }
-        //}
+        
     }
 }

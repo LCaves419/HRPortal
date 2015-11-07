@@ -22,12 +22,12 @@ namespace HRPortal.Data.PolicyRepo
             {
                 _polInfo.AddRange(new List<PolicyInformation>()
                 {
-                    new PolicyInformation {PolId = 1, Category = "Attendance", PolicyName = "Tardy",
+                    new PolicyInformation {PolId = 1, CatName = "Attendance", PolicyName = "Tardy",
                             CreationDate = DateTime.Parse("12/02/2011"),
                             PolicyText = ("BLIUHEJLUHWLEUHOU FGHWEOPIUGHPEWOIUGHPOWUEHFLJD SHPOJOSH DPOIUWE GHOIUPEWHGPOUIW HEPOUIEW HOUVPWH BDPOJUPDGWHPOUWEGHGEOWPU HEPWOUG HWEPO U.")},
 
 
-                    new PolicyInformation {PolId = 2, Category = "Food", PolicyName = "Trash",
+                    new PolicyInformation {PolId = 2, CatName = "Food", PolicyName = "Trash",
                             CreationDate = DateTime.Parse("12/02/2011"),
                             PolicyText = ("BLIUHEJLUHWLEUHOU FGHWEOPIUGHPEWOIUGHPOWUEHFLJD SHPOJOSH DPOIUWE GHOIUPEWHGPOUIW HEPOUIEW HOUVPWH BDPOJUPDGWHPOUWEGHGEOWPU HEPWOUG HWEPO U.")}
                                   });
@@ -51,7 +51,7 @@ namespace HRPortal.Data.PolicyRepo
                     CatId = p.PolId,
                    // CatId = p.Category.Distinct()
                     
-                    CatName = p.Category
+                    CatName = p.CatName
                 };
                 catList.Add(cats);
             }
@@ -85,6 +85,26 @@ namespace HRPortal.Data.PolicyRepo
         {
             return _polInfo.FirstOrDefault(p => p.PolId == id);
         }
+
+        //TODO: send back the Category Name not the number 
+
+        public string  GetCatById(int id)
+        {
+            List<Category> allCats = GetAllCategories();
+            var results = from c in allCats
+                          where id == c.CatId
+                         select c.CatName;
+            var name = "";
+            foreach (var c in results)
+            {
+                name = c;
+            }
+
+            
+            return name;
+        }
+        //**********************HERE IT IS *************************************************
+        //***********************************************************************
 
         //public List<string> GetCat()
         //{

@@ -36,6 +36,9 @@
         <th>
             Policy Text
         </th>
+        <th>
+            Category
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -54,7 +57,7 @@
                 @Html.DisplayFor(modelItem => item.PolicyText)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Category)
+                @Html.DisplayFor(modelItem => item.CatName)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", "Policy", new { id = item.PolId }, null)

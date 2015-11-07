@@ -23,38 +23,10 @@ namespace HRPortal.UI.Controllers
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
             //get policies from repo
             var policies = repo.GetAll();
-            //get Categories from repo
-            //var cats = repo.GetAllCategories();
-            //List<PolicyInformationVM> pvms = new List<PolicyInformationVM>();
-            //PolicyInformationVM pvm = new PolicyInformationVM();
-            //pvm.Category = new Category();
-            //pvm.CreateCategoryList(cats);
 
             return View(policies);
-
-
-
-            //foreach (var p in policies)
-            //{
-            //    pvm.PolId = p.PolId.ToString();
-            //   // pvm.CategoryList.Add(p.Category); 
-            //    pvm.PolicyName = p.PolicyName;
-            //    pvm.CreationDate = p.CreationDate;
-            //    pvm.PolicyText = p.PolicyText;
-            //    pvms.Add(pvm);
-            //    var cl =  pvm.CreateCategoryList(cats);
-            //    //pvm.ListCat = cl;
-            //    return View(cl);//}
-
         }
 
-        //[HttpPost]
-        //public ActionResult AddAddress(PolicyInformationVM newPolicy)
-        //{
-        //    return View("Result", newPolicy.);
-        //}
-        //***********************************************************
-        //***********************************************************
         public ActionResult Edit(int id)
         {
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
@@ -64,7 +36,7 @@ namespace HRPortal.UI.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditPolicy(PolicyInformation policy)
+        public ActionResult Edit(PolicyInformation policy)
         {
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
             repo.Edit(policy);
@@ -101,6 +73,15 @@ namespace HRPortal.UI.Controllers
             //a.PolicyText = Request.Form["PolicyText"];
            
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
+            // get the Cat ID *********************************
+            //TODO: Call GETCATBYID to get the name of the category and add it to the model
+            var catNum = 0;
+            if (model.CatName == "Food" || model.CatName == "Attendance")
+            {
+                catNum = model.CatId;
+            }
+            
+            model.CatName = repo.GetCatById(catNum);
 
             // add the policy
             repo.Add(model);

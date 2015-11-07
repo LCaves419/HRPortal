@@ -43,7 +43,7 @@ namespace HRPortal.UI.Models
                 var newItem = new SelectListItem();
                 //newItem.Text = s.ListCat.ToString();
                 newItem.Text = s.CatName;
-                newItem.Value = s.CatId.ToString();
+                newItem.Value = s.CatId.ToString();// Do I need to Change this to Text ot vice versa??
                 
                 ListCat.Add(newItem);
             }

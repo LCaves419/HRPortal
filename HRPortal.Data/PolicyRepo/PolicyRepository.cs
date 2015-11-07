@@ -31,9 +31,9 @@ namespace HRPortal.Data.PolicyRepo
                         var columns = inputLine.Split(',');
                         var policyInfo = new PolicyInformation()
                         {
-                            //Application
+                            //Policy
                             PolId = int.Parse(columns[0]),
-                            Category = (columns[1]),
+                            CatName = (columns[1]),
                             PolicyName = (columns[2]),
                             CreationDate = DateTime.Parse(columns[3]),
                             PolicyText = (columns[4]),
@@ -85,6 +85,11 @@ namespace HRPortal.Data.PolicyRepo
         public PolicyInformation GetById(int id)
         {
             return GetAll().FirstOrDefault(c => c.PolId == id);
+        }
+
+        public string GetCatById(int id)
+        {
+            throw new NotImplementedException();
         }
 
         private void WriteFile(List<PolicyInformation> Policies)

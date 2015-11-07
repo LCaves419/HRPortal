@@ -15,5 +15,6 @@ namespace HRPortal.Data.PolicyRepo
         void Delete(int id);
         void Edit(PolicyInformation pol);
         PolicyInformation GetById(int id);
+        string GetCatById(int id);
     }
 }

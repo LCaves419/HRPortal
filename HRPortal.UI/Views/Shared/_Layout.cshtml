@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -20,12 +20,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                    <a class="navbar-brand" href="/Home/Index"> @*<span class="blah"><img src="~/Images/main-thumb-t-419429-200-njzoxwfkjlsuitxffhaddyjaqijlgdbf.jpeg" /></span>*@ SG Corp. </a>
+                    <a class="navbar-brand" href="/Home/Index"> <span class="blah"><img src="~/Images/SGLogoWhite.png" width="50" height="50"/></span></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div>
+            @*<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*@
                 <ul class="nav navbar-nav">
-                    <li class="active">@Html.ActionLink("Apply", "Create", "Home") <span class="sr-only">(current)</span></li>
+                    <li class="active">@Html.ActionLink("Apply", "CreateWNav", "Home") <span class="sr-only">(current)</span></li>
                   
                     
                 <li class="dropdown">
@@ -49,48 +50,12 @@
                 </li>
                     </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active">@Html.ActionLink("Admin", "Index", "Home") <span class="sr-only">(current)</span></li>
+                    <li class="admin">@Html.ActionLink("Admin", "Index", "Home") <span class="sr-only">(current)</span></li>
                   
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-@*<div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("SG Corp.", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                @Html.ActionLink("Policies", "Index", "Policy", new { area = "" }, new { @class = "navbar-brand" })
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">View Policies</a></li>
-                        <li><a href="#">Manage Policies</a></li>
-                                <li class="dropdown-submenu">
-                                <li><a href="#">Attendence</a></li>
-                                <li><a href="#">Food</a></li>
-                    <li><a href="#">Time Off</a></li>
-               
-                <li><a href="#">Manage Catagories</a></li>
-
-
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-                </ul>
-                </li>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
-            </div>
-        </div>
-    </div>*@
 
 <div class="container body-content">
     @RenderBody()

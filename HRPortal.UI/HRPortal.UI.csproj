@@ -98,7 +98,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Images\main-thumb-t-419429-200-njzoxwfkjlsuitxffhaddyjaqijlgdbf.jpeg" />
+    <Content Include="Images\SGLogo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -136,7 +136,7 @@
     <Content Include="Views\Policy\OldIndex.cshtml" />
     <Content Include="Views\Policy\Create.cshtml" />
     <Content Include="Views\Policy\Edit.cshtml" />
-    <Content Include="Views\Home\Create - Copy.cshtml" />
+    <Content Include="Views\Home\CreateWNav.cshtml" />
     <Content Include="Views\Shared\_Layout - Apply.cshtml" />
     <Content Include="Views\Policy\GetCats.cshtml" />
     <Content Include="Views\Catagory\RequestForm.cshtml" />
@@ -145,6 +145,7 @@
     <Content Include="Views\Catagory\Index.cshtml" />
     <Content Include="Views\Catagory\ManagePoliciesForDropDown.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
+    <Content Include="Views\Home\AppReceived.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

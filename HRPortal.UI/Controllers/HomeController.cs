@@ -47,7 +47,7 @@ namespace HRPortal.UI.Controllers
             var repo = Factory.CreateApplicationRepository();
             repo.Edit(application);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("AppReceived");
         }
 
         [HttpPost]
@@ -110,6 +110,60 @@ namespace HRPortal.UI.Controllers
 
             return RedirectToAction("Edit");
             //return View(model);
+        }
+
+        // Directs to App with Navbar.
+        public ActionResult CreateWNav()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateWNav(ApplicationInformation model)
+        {
+            // create a contact
+            var a = new ApplicationInformation();
+
+            // get the data from the input fields
+            //Personal Information
+            a.FirstName = Request.Form["FirstName"];
+            a.LastName = Request.Form["LastName"];
+            a.PhoneNumber = Request.Form["PhoneNumber"];
+            a.Email = Request.Form["Email"];
+            a.StreetAddress = Request.Form["StreetAddress"];
+            a.State = Request.Form["State"];
+            a.City = Request.Form["City"];
+            a.ZipCode = Request.Form["ZipCode"];
+
+            //Application
+            a.DesiredSalary = int.Parse(Request.Form["DesiredSalary"]);
+            a.Position = Request.Form["Position"];
+            a.JobTitle = Request.Form["JobTitle"];
+            a.SchoolName = Request.Form["SchoolName"];
+            a.Responsibilities = Request.Form["Responsibilities"];
+            a.StartDate = DateTime.Parse(Request.Form["StartDate"]);
+            a.EndDate = DateTime.Parse(Request.Form["EndDate"]);
+            a.Awards = Request.Form["Awards"];
+            a.DateOfApplication = DateTime.Parse(Request.Form["DateOfApplication"]);
+            a.EmployerName = Request.Form["EmployerName"];
+            a.GPA = double.Parse(Request.Form["GPA"]);
+            a.GraduationDate = DateTime.Parse(Request.Form["GraduationDate"]);
+            a.Major = Request.Form["Major"];
+
+            // create our application in the repository
+            var repo = Factory.CreateApplicationRepository();
+
+            // add the application
+            repo.Add(a);
+
+            return RedirectToAction("Edit");
+            //return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult AppReceived()
+        {
+            return View("AppReceived");
         }
     }
 }

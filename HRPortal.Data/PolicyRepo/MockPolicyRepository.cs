@@ -24,12 +24,12 @@ namespace HRPortal.Data.PolicyRepo
                 {
                     new PolicyInformation {PolId = 1, CatName = "Attendance", PolicyName = "Tardy",
                             CreationDate = DateTime.Parse("12/02/2011"),
-                            PolicyText = ("BLIUHEJLUHWLEUHOU FGHWEOPIUGHPEWOIUGHPOWUEHFLJD SHPOJOSH DPOIUWE GHOIUPEWHGPOUIW HEPOUIEW HOUVPWH BDPOJUPDGWHPOUWEGHGEOWPU HEPWOUG HWEPO U.")},
+                            PolicyText = ("Bacon ipsum dolor amet hamburger andouille ham hock porchetta kielbasa doner short ribs. Frankfurter turducken drumstick, ball tip cow sirloin salami tri-tip short ribs chicken pork belly boudin beef ribs. Picanha t-bone short loin meatloaf alcatra, jowl frankfurter kevin. Pork chop tri-tip chicken, jowl jerky cow swine pork loin spare ribs. Sirloin kevin beef short loin ham.")},
 
 
                     new PolicyInformation {PolId = 2, CatName = "Food", PolicyName = "Trash",
                             CreationDate = DateTime.Parse("12/02/2011"),
-                            PolicyText = ("BLIUHEJLUHWLEUHOU FGHWEOPIUGHPEWOIUGHPOWUEHFLJD SHPOJOSH DPOIUWE GHOIUPEWHGPOUIW HEPOUIEW HOUVPWH BDPOJUPDGWHPOUWEGHGEOWPU HEPWOUG HWEPO U.")}
+                            PolicyText = ("Chuck t-bone short loin, pork cow tri-tip filet mignon pork loin pork chop tongue pig. T-bone leberkas doner, pancetta kevin bacon filet mignon ham hock biltong andouille drumstick hamburger shank spare ribs. Frankfurter ham hock turducken pork chop filet mignon meatloaf boudin andouille. Tail venison porchetta chicken. Kevin tri-tip fatback ball tip. Pig venison biltong ham shankle salami tenderloin tongue flank fatback strip steak kevin. Rump frankfurter landjaeger ham hock, t-bone biltong meatloaf pork belly boudin bacon swine.")}
                                   });
                 isFirstLoad = true;
             }

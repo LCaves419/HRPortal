@@ -23,47 +23,52 @@
 @*Policy Headder Titles*@
 
 <table class="table">
-    <tr>
-        <th>
-            Policy ID
-        </th>
-        <th>
-            Policy Name
-        </th>
-        <th>
-            Creation Date
-        </th>
-        <th>
-            Policy Text
-        </th>
-        <th>
-            Category
-        </th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PolicyText)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CatName)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", "Policy", new { id = item.PolId }, null)
-                @Html.ActionLink("Delete", "Delete", new { id = item.PolId }, new { onclick = "return confirm('Are you sure you want to delete this Policy?');" })
-            </td>
+            <th>
+                Policy ID
+            </th>
+            <th>
+                Policy Name
+            </th>
+            <th>
+                Creation Date
+            </th>
+            <th>
+                Policy Text
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Options
+            </th>
         </tr>
-    }
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PolId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PolicyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PolicyText)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CatName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Policy", new { id = item.PolId }, null)
+                    @Html.ActionLink("Delete", "Delete", new { id = item.PolId }, new { onclick = "return confirm('Are you sure you want to delete this Policy?');" })
+                </td>
+            </tr>
+        }
+    </tbody>
 
 </table>

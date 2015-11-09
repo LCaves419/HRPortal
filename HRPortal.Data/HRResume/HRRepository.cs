@@ -10,7 +10,7 @@ namespace HRPortal.Data
 {
     public class HRRepository : IApplicationRepository
     {
-        private string _fileName = "DataFiles/applications.txt";
+        private string _fileName = @"DataFiles/applications.txt";
 
         public List<ApplicationInformation> GetAll()
         {

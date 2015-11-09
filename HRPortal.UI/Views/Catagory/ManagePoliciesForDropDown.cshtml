@@ -6,18 +6,16 @@
 
 <h2>ManagePoliciesForDropDown</h2>
 
-
-@using (Html.BeginForm("Create", "Policy", FormMethod.Post)) 
+@using (Html.BeginForm("Create", "Policy", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>PolicyInformationVM</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.HiddenFor(model => model.PolId, "ID")
-            
         </div>
 
         <div class="form-group">
@@ -29,10 +27,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CreationDate, "Creation Date", htmlAttributes: new {@class = "control-label col-md-2"})
+            @Html.LabelFor(model => model.CreationDate, "Creation Date", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CreationDate, new {htmlAttributes = new {@class = "form-control"}})
-                @Html.ValidationMessageFor(model => model.CreationDate, "", new {@class = "text-danger"})
+                @Html.EditorFor(model => model.CreationDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CreationDate, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
@@ -43,24 +41,17 @@
             </div>
         </div>
         <div>
-            @*@using (Html.BeginForm("Create", "Policy", FormMethod.Post))
-        {*@
-            @*<p>@Html.DisplayFor(m => m.PolicyName)</p>*@
             <p>
+                @Html.LabelFor(model => model.Category.CatName, htmlAttributes: new {@class = "control-label col-md-2"})
 
-                @Html.LabelFor(model => model.Category, htmlAttributes: new { @class = "control-label col-md-2" })
-
-                @Html.DropDownListFor(m => m.Category, Model.ListCat, htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.DropDownListFor(m => m.Category.CatName, Model.ListCat, htmlAttributes: new {@class = "control-label col-md-2"})
             </p>
-        @*}*@
-
+            <hr />
         </div>
 
-        
-
-        <div class="form-group">
+        <div>
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-danger" />
             </div>
         </div>
     </div>

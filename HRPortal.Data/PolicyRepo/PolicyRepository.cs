@@ -10,7 +10,7 @@ namespace HRPortal.Data.PolicyRepo
 {
     public class PolicyRepository : IPolicyRepository
     {
-        private string _policyFileName = "DataFiles/policies.txt";
+        private string _policyFileName = @"DataFiles/policies.txt";
 
         PolicyInformation pol = new PolicyInformation();
 

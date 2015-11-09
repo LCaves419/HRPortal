@@ -156,11 +156,10 @@ namespace HRPortal.UI.Controllers
             // add the application
             repo.Add(a);
 
-            return RedirectToAction("Edit");
+            return RedirectToAction("AppReceived");
             //return View(model);
         }
-
-        [HttpPost]
+        
         public ActionResult AppReceived()
         {
             return View("AppReceived");

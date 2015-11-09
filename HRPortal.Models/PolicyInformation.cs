@@ -13,10 +13,7 @@ namespace HRPortal.Models
         public string PolicyName { get; set; }
         public DateTime CreationDate { get; set; }
         public string PolicyText { get; set; }
-        public Category Category1 { get; set; }
         public int CatId { get; set; }
-
         public string CatName { get; set; }
-
     }
 }

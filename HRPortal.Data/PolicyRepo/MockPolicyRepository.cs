@@ -86,8 +86,7 @@ namespace HRPortal.Data.PolicyRepo
             return _polInfo.FirstOrDefault(p => p.PolId == id);
         }
 
-        //TODO: send back the Category Name not the number 
-
+        //Need to send back CatName, not ID.
         public string  GetCatById(int id)
         {
             List<Category> allCats = GetAllCategories();
@@ -99,26 +98,8 @@ namespace HRPortal.Data.PolicyRepo
             {
                 name = c;
             }
-
             
             return name;
         }
-        //**********************HERE IT IS *************************************************
-        //***********************************************************************
-
-        //public List<string> GetCat()
-        //{
-        //    List<PolicyInformation> cats;
-        //    cats = GetAll();
-
-        //    //var results = from c in cats
-        //    //    select c.Category;
-        //    foreach (var c in cats)
-        //    {
-        //        List<string> cat = new List<string>();
-        //        cat = c.Category;
-        //    }
-
-        //}
     }
 }

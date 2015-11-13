@@ -6,21 +6,11 @@
 
 <h2>Policy Index</h2>
 
-@*@using (Html.BeginForm("Create", "Policy", FormMethod.Post))
-    {
-        <p>@Html.DisplayFor(m => m.PolicyName)</p>
-        <p></p>
-
-        // creates the dropdaown Cat list
-        <p> @Html.DropDownListFor(m => m.Category, Model.ListCat)</p>
-    }*@
-
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 
-@*Policy Headder Titles*@
+@*Policy Header Titles*@
 
 <table class="table">
         <tr>

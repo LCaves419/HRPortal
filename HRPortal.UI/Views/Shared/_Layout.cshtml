@@ -12,7 +12,6 @@
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
@@ -22,13 +21,9 @@
                 </button>
                     <a class="navbar-brand" href="/Home/Index"> <span class="blah"><img src="~/Images/SGLogoWhite.png" width="50" height="50"/></span></a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div>
-            @*<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">*@
                 <ul class="nav navbar-nav">
                     <li class="active">@Html.ActionLink("Apply", "CreateWNav", "Home") <span class="sr-only">(current)</span></li>
-                  
-                    
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Policies <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -37,15 +32,6 @@
                         <li class="default">@Html.ActionLink("Manage Policies", "ManagePoliciesForDropDown", "Catagory") <span class="sr-only">(current)</span></li>
                         <li class="divider"></li>
                         <li class="default">@Html.ActionLink("Manage Categories", "Index", "Catagory") <span class="sr-only">(current)</span></li>
-                        @*<li class="dropdown-submenu">
-                            <a tabindex="-1" href="#">Add New Policy</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a tabindex="-1" href="#">Select Category</a>
-                                </li>
-                                <li><a href="#">Manage Catagories</a></li>
-                            </ul>
-                        </li>*@
                     </ul>
                 </li>
                     </ul>
@@ -53,8 +39,8 @@
                     <li class="admin">@Html.ActionLink("Admin", "Index", "Home") <span class="sr-only">(current)</span></li>
                   
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            </div>
+        </div>
     </nav>
 
 <div class="container body-content">

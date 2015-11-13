@@ -21,12 +21,10 @@ namespace HRPortal.UI.Controllers
             return View(cats);
         }
 
-
         public ActionResult RequestForm()
         {
             return View();
         }
-
 
         [HttpPost]
         public ActionResult RequestFormPost()
@@ -43,19 +41,12 @@ namespace HRPortal.UI.Controllers
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
             var cats = repo.GetAllCategories();
 
-
-            List<PolicyInformationVM> pvms = new List<PolicyInformationVM>();
             PolicyInformationVM pvm = new PolicyInformationVM();
 
             pvm.Category = new Category();
             pvm.CreateCategoryList(cats);
 
             return View(pvm);
-
-
         }
-
-
-
     }
 }

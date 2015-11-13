@@ -10,7 +10,5 @@ namespace HRPortal.UI.Models
     public class CategoryVM
     {
         public Category Category { get; set; }
-        //public List<Category> ListCat { get; set; }
-
     }
 }

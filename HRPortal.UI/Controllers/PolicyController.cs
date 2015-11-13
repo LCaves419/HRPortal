@@ -62,7 +62,6 @@ namespace HRPortal.UI.Controllers
            
             var repo = PolicyRepositoryFactory.CreatePolicyRepository();
             // get the Cat ID *********************************
-            //TODO: Call GETCATBYID to get the name of the category and add it to the model
             var catNum = 0;
             if (model.CatName == "Food" || model.CatName == "Attendance")
             {

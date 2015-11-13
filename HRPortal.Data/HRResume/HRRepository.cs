@@ -28,9 +28,6 @@ namespace HRPortal.Data
                     {
                         var columns = inputLine.Split(',');
                         var appInfo = new ApplicationInformation()
-                            // @PersonalInfo = new PersonalInformation();
-                            //@EmploymentInfo = new EmploymentInformation();
-                            // @EducationInfo = new EducationInformation();
                         {
                             //Application                       
                             ResumeId = int.Parse(columns[0]),

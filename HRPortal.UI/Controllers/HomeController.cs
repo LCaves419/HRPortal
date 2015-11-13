@@ -22,9 +22,6 @@ namespace HRPortal.UI.Controllers
 
         public ActionResult Edit(int id)
         {
-            // retrieve the contact id we passed in
-            //int contactId = int.Parse(RouteData.Values["id"].ToString());
-
             // get the contact from the repo
             var repo = Factory.CreateApplicationRepository();
             ApplicationInformation  app = repo.GetById(id);
@@ -35,14 +32,6 @@ namespace HRPortal.UI.Controllers
         [HttpPost]
         public ActionResult Edit(ApplicationInformation application)
         {
-            //// create a new contact
-            //var c = new Contact();
-
-            //// set the values from the form
-            //c.Name = Request.Form["Name"];
-            //c.PhoneNumber = Request.Form["PhoneNumber"];
-            //c.ContactID = int.Parse(Request.Form["ContactID"]);
-
             // edit the contact in the repo
             var repo = Factory.CreateApplicationRepository();
             repo.Edit(application);
@@ -53,15 +42,13 @@ namespace HRPortal.UI.Controllers
         [HttpPost]
         public ActionResult DeleteApplication(int id)
         {
-            // get the id that we passed in
-            //int contactID = int.Parse(Request.Form["ContactID"]);
-
             // delete the contact from the repo
             var repo = Factory.CreateApplicationRepository();
             repo.Delete(id);
 
             // get the contacts and go to the Index
             //var contacts = repo.GetAll();
+
             return RedirectToAction("Index");
         }
 
